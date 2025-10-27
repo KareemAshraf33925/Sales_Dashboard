@@ -6,7 +6,7 @@ import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { getMessages } from "next-intl/server";
-import ThemeProvider from "./ThemeProvider";
+import { NextIntlClientProvider } from "next-intl";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
@@ -35,23 +35,32 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children, params }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }) {
-  const { locale } = await params;
+  const  {locale}  = await params;
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
 
-  const messages =await  getMessages({ locale });
+  const messages = await getMessages({ locale });
 
   return (
     <ClerkProvider>
-    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ThemeProvider locale={locale} messages={messages}>{children}</ThemeProvider>
-      </body>
-    </html>
+      <html
+        lang={locale}
+        dir={locale === "ar" ? "rtl" : "ltr"}
+        style={{ colorScheme: "light" }}
+        className="light"
+      >
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+          
+              {children}
+            
+          </NextIntlClientProvider>
+        </body>
+      </html>
     </ClerkProvider>
   );
 }
