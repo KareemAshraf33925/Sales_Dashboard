@@ -31,13 +31,12 @@ export const metadata: Metadata = {
   },
 };
 
-// هنا نمرر الـ generic النوع المناسب للـ params
-type RootLayoutProps = {
+
+
+export default async function RootLayout({ children, params }: {
   children: React.ReactNode;
   params: { locale: string };
-};
-
-export default async function RootLayout({ children, params }: RootLayoutProps) {
+}) {
   const { locale } = params;
 
   if (!hasLocale(routing.locales, locale)) {
