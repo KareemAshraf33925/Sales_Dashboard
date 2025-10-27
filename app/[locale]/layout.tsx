@@ -1,7 +1,7 @@
 import type {  Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+import { ClerkProvider } from "@clerk/nextjs";
 import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
@@ -35,21 +35,23 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children, params }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = params;
+  const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
 
-  const messages = await getMessages({ locale });
+  const messages =await  getMessages({ locale });
 
   return (
+    <ClerkProvider>
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider locale={locale} messages={messages}>{children}</ThemeProvider>
       </body>
     </html>
+    </ClerkProvider>
   );
 }

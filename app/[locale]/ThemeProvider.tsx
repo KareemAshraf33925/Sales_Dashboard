@@ -1,6 +1,5 @@
 'use client';
 import { useEffect, useState, ReactNode } from 'react';
-import { ClerkProvider } from "@clerk/nextjs";
 import { NextIntlClientProvider } from "next-intl";
 
 type Props = {
@@ -22,15 +21,10 @@ export default function ClientProviders({ children, locale, messages }: Props) {
   if (!mounted) return null; // تمنع Hydration mismatch
 
   return (
-    <ClerkProvider
-      signInUrl={`/${locale}/sign-in`}
-      signUpUrl={`/${locale}/sign-up`}
-      afterSignInUrl={`/${locale}/dashboard`}
-      afterSignUpUrl={`/${locale}/dashboard`}
-    >
+    
       <NextIntlClientProvider locale={locale} messages={messages}>
         <div className={theme}>{children}</div>
       </NextIntlClientProvider>
-    </ClerkProvider>
+    
   );
 }
