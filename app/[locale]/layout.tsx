@@ -1,4 +1,4 @@
-import type {  Metadata } from "next";
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
@@ -31,20 +31,13 @@ export const metadata: Metadata = {
   },
 };
 
-
-
-export default async function RootLayout({ children, params }: {
+export default function RootLayout({
+  children,
+  params,
+}: {
   children: React.ReactNode;
   params: { locale: string };
 }) {
- 
-
-  if (!hasLocale(routing.locales, params.locale)) {
-    notFound();
-  }
-
-  const messages = await getMessages({ locale: params.locale } );
-
   return (
     <ClerkProvider>
       <html
@@ -54,13 +47,29 @@ export default async function RootLayout({ children, params }: {
         className="light"
       >
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-          <NextIntlClientProvider locale={params.locale} messages={messages}>
-          
-              {children}
-            
-          </NextIntlClientProvider>
+          <AsyncIntlProvider locale={params.locale}>{children}</AsyncIntlProvider>
         </body>
       </html>
     </ClerkProvider>
+  );
+}
+
+// مكون فرعي async للفصل بين logic وال layout
+async function AsyncIntlProvider({
+  children,
+  locale,
+}: {
+  children: React.ReactNode;
+  locale: string;
+}) {
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  const messages = await getMessages({ locale });
+  return (
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      {children}
+    </NextIntlClientProvider>
   );
 }
