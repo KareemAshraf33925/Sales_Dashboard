@@ -5,9 +5,9 @@ import { redirect } from "next/navigation";
 export const dynamic = "force-dynamic";
 
 export default async function HomePage({ params }: { params: { locale: string } }) {
-  const { locale } =  params;
+ 
   const user = await currentUser();
 
-  const destination = user ? `/${locale}/dashboard` : `/${locale}/sign-in`;
+  const destination = user ? `/${params.locale}/dashboard` : `/${params.locale}/sign-in`;
   redirect(destination);
 }

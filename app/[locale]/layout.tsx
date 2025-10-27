@@ -37,24 +37,24 @@ export default async function RootLayout({ children, params }: {
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  const  {locale}  =  params;
+ 
 
-  if (!hasLocale(routing.locales, locale)) {
+  if (!hasLocale(routing.locales, params.locale)) {
     notFound();
   }
 
-  const messages = await getMessages({ locale });
+  const messages = await getMessages({ locale: params.locale } );
 
   return (
     <ClerkProvider>
       <html
-        lang={locale}
-        dir={locale === "ar" ? "rtl" : "ltr"}
+        lang={params.locale}
+        dir={params.locale === "ar" ? "rtl" : "ltr"}
         style={{ colorScheme: "light" }}
         className="light"
       >
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-          <NextIntlClientProvider locale={locale} messages={messages}>
+          <NextIntlClientProvider locale={params.locale} messages={messages}>
           
               {children}
             
