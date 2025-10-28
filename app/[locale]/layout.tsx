@@ -6,7 +6,6 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -28,7 +27,7 @@ export const metadata: Metadata = {
     "sales pipeline",
   ],
   icons: {
-    icon: "/Sales_Dashboard/assets/dashboard-icon.png",
+    icon: "/assets/dashboard-icon.png",
   },
 };
 type Props = {

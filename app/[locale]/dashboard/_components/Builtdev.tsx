@@ -21,7 +21,7 @@ export default function Builtdev() {
   </div>
   <img
     alt="rocket"
-    src="/Sales_Dashboard/assets/rocket.jpg"
+    src="/assets/rocket.jpg"
     className="h-48 w-48 rounded-2xl "
   />
 </div>
@@ -45,7 +45,7 @@ export default function Builtdev() {
 </div>
 <img
    alt="laptop"
-   src="/Sales_Dashboard/assets/laptop.jpg"
+   src="/assets/laptop.jpg"
    className=" absolute  inset-0 top-0 bottom-0   rounded-2xl z-0  w-full "
  />
 </div>

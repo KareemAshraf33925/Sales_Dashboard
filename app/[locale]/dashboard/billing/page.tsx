@@ -3,6 +3,12 @@ import Visa from '../_components/Visa'
 import Billinginformation from '../_components/Billinginformation'
 import Transactions from '../_components/Transactions'
 
+ 
+import { routing } from '@/i18n/routing'
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
+}
 export default function Billing() {
   return (
     <div className='md:px-5'>

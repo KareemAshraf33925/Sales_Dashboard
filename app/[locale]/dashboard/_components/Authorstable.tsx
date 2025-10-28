@@ -32,7 +32,7 @@ export default function Authorstable() {
   
 <TableRow>
     <TableCell className="font-bold flex flex-row justify-start items-center gap-4">
-    <img src={"/Sales_Dashboard/assets/mark.jpg"} alt="John Michael" loading="lazy" className="w-10 h-10 rounded-2xl"/>
+    <img src={"/assets/mark.jpg"} alt="John Michael" loading="lazy" className="w-10 h-10 rounded-2xl"/>
     <div className="flex flex-col gap-0.5">
         <h5 className="text-md text-bold text-gray-500 ">{t("tables.JohnMichael")}</h5>
         <p className="text-gray-500">john@creative-tim.com</p>
@@ -58,7 +58,7 @@ export default function Authorstable() {
 
   <TableRow>
     <TableCell className="font-bold flex flex-row justify-start items-center gap-4">
-    <img src={"/Sales_Dashboard/assets/henyre.jpg"} alt="Alexa Liras" loading="lazy" className="w-10 h-10 rounded-2xl"/>
+    <img src={"/assets/henyre.jpg"} alt="Alexa Liras" loading="lazy" className="w-10 h-10 rounded-2xl"/>
     <div className="flex flex-col gap-0.5">
         <h5 className="text-md text-bold text-gray-500 ">{t("tables.AlexaLiras")}</h5>
         <p className="text-gray-500">alexa@creative-tim.com</p>
@@ -83,7 +83,7 @@ export default function Authorstable() {
   </TableRow>
   <TableRow>
     <TableCell className="font-bold flex flex-row justify-start items-center gap-4">
-    <img src={"/Sales_Dashboard/assets/mark.jpg"} alt=" Laurent Perrier" loading="lazy" className="w-10 h-10 rounded-2xl"/>
+    <img src={"/assets/mark.jpg"} alt=" Laurent Perrier" loading="lazy" className="w-10 h-10 rounded-2xl"/>
     <div className="flex flex-col gap-0.5">
         <h5 className="text-md text-bold text-gray-500 ">
         {t("tables.LaurentPerrier")}</h5>
@@ -109,7 +109,7 @@ export default function Authorstable() {
   </TableRow>
   <TableRow>
     <TableCell className="font-bold flex flex-row justify-start items-center gap-4">
-    <img src={"/Sales_Dashboard/assets/henyre.jpg"} alt="Michael Levi" loading="lazy" className="w-10 h-10 rounded-2xl"/>
+    <img src={"/assets/henyre.jpg"} alt="Michael Levi" loading="lazy" className="w-10 h-10 rounded-2xl"/>
     <div className="flex flex-col gap-0.5">
         <h5 className="text-md text-bold text-gray-500 ">
         {t("tables.MichaelLevi")}</h5>
@@ -136,7 +136,7 @@ export default function Authorstable() {
 
   <TableRow>
     <TableCell className="font-bold flex flex-row justify-start items-center gap-4">
-    <img src={"/Sales_Dashboard/assets/mark.jpg"} alt="Richard Gran" loading="lazy" className="w-10 h-10 rounded-2xl"/>
+    <img src={"/assets/mark.jpg"} alt="Richard Gran" loading="lazy" className="w-10 h-10 rounded-2xl"/>
     <div className="flex flex-col gap-0.5">
         <h5 className="text-md text-bold text-gray-500 ">
       {t("tables.RichardGran")}</h5>

@@ -13,7 +13,7 @@ export default function Visa() {
 <div className=" md:px-3  relative w-80 h-80">
  <img
    alt="card visa"
-   src="/Sales_Dashboard/assets/card-classic.webp"
+   src="/assets/card-classic.webp"
    className=" absolute inset-0 top-0 bottom-0 rounded-2xl z-0 w-full h-full object-cover"
  />
 </div>
@@ -40,13 +40,13 @@ export default function Visa() {
         </div>
         <div className='flex flex-col md:flex-row  justify-center items-center gap-5 md:justify-between md:items-center py-5'>
             <div className='border  gap-3 w-46 h-16 md:w-50 md:h-16 lg:w-72 lg:h-16  rounded-2xl flex justify-center items-center md:gap-5 lg:gap-8 px-10'>
-                <img src="/Sales_Dashboard/assets/mastercard.png" alt="mastercard" className='w-5 h-5 ' />
+                <img src="/assets/mastercard.png" alt="mastercard" className='w-5 h-5 ' />
                 <p className='font-bold text-gray-500'>**** </p>
                 <p className='font-bold text-gray-500'>**** </p>
                 <p className='font-bold text-gray-500'>7852</p>
             </div>
             <div className='border gap-3 w-46 h-16 md:w-50 md:h-16 lg:w-72 lg:h-16 rounded-2xl flex justify-center items-center  md:gap-5 lg:gap-8 px-10'>
-                <img src="/Sales_Dashboard/assets/visa.png" alt="visa" className='w-5 h-5 ' />
+                <img src="/assets/visa.png" alt="visa" className='w-5 h-5 ' />
                 <p className='font-bold text-gray-500'>**** </p>
                 <p className='font-bold text-gray-500'>**** </p>
                 <p className='font-bold text-gray-500'>5248</p>

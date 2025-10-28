@@ -28,16 +28,16 @@ export default function Tabledata() {
   <TableBody>
     <TableRow>
       <TableCell className="font-bold flex flex-row justify-start items-center gap-1.5">
-        <img src={"/Sales_Dashboard/assets/adobe.png"} alt="adob xd" loading="lazy" className="w-12 h-12"/>
+        <img src={"/assets/adobe.png"} alt="adob xd" loading="lazy" className="w-12 h-12"/>
         {t("dashboard.SoftUIXDVersion")}
       </TableCell>
       
       <TableCell>
       <div className="flex ">
-      <img src={"/Sales_Dashboard/assets/henyre.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
-      <img src={"/Sales_Dashboard/assets/mark.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
-      <img src={"/Sales_Dashboard/assets/dayana.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
-      <img src={"/Sales_Dashboard/assets/dayana1.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
+      <img src={"/assets/henyre.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
+      <img src={"/assets/mark.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
+      <img src={"/assets/dayana.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
+      <img src={"/assets/dayana1.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
       </div>  
          </TableCell>
       <TableCell className="font-bold">$14,000 </TableCell>
@@ -51,13 +51,13 @@ export default function Tabledata() {
     </TableRow>
     <TableRow>
       <TableCell className="font-bold flex flex-row justify-start items-center gap-4">
-      <img src={"/Sales_Dashboard/assets/track.png"} alt="adob xd" loading="lazy" className="w-8 h-8"/>
+      <img src={"/assets/track.png"} alt="adob xd" loading="lazy" className="w-8 h-8"/>
       {t("dashboard.AddProgressTrack")}
 </TableCell>
       <TableCell>
       <div className="flex">
-      <img src={"/Sales_Dashboard/assets/henyre.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
-      <img src={"/Sales_Dashboard/assets/mark.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
+      <img src={"/assets/henyre.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
+      <img src={"/assets/mark.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
       </div> 
       </TableCell>
       <TableCell className="font-bold">$3,000 </TableCell>
@@ -70,14 +70,14 @@ export default function Tabledata() {
     </TableRow>
     <TableRow>
       <TableCell className="font-bold flex flex-row justify-start items-center gap-4">
-      <img src={"/Sales_Dashboard/assets/system-error.jpg"} alt="adob xd" loading="lazy" className="w-12 h-12"/>
+      <img src={"/assets/system-error.jpg"} alt="adob xd" loading="lazy" className="w-12 h-12"/>
 
       {t("dashboard.FixPlatformErrors")}
 </TableCell>
       <TableCell>
       <div className="flex">
-      <img src={"/Sales_Dashboard/assets/henyre.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
-      <img src={"/Sales_Dashboard/assets/dayana1.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
+      <img src={"/assets/henyre.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
+      <img src={"/assets/dayana1.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
       </div> 
       </TableCell>
       <TableCell className="font-bold">Not set </TableCell>
@@ -90,15 +90,15 @@ export default function Tabledata() {
     </TableRow>
     <TableRow>
       <TableCell className="font-bold flex flex-row justify-start items-center gap-4">
-      <img src={"/Sales_Dashboard/assets/lanch.png"} alt="adob xd" loading="lazy" className="w-10 h-10"/>
+      <img src={"/assets/lanch.png"} alt="adob xd" loading="lazy" className="w-10 h-10"/>
       {t("dashboard.LaunchourMobileApp")}
 </TableCell>
       <TableCell>
       <div className="flex">
-      <img src={"/Sales_Dashboard/assets/henyre.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
-      <img src={"/Sales_Dashboard/assets/mark.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
-      <img src={"/Sales_Dashboard/assets/dayana.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
-      <img src={"/Sales_Dashboard/assets/dayana1.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
+      <img src={"/assets/henyre.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
+      <img src={"/assets/mark.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
+      <img src={"/assets/dayana.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
+      <img src={"/assets/dayana1.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
       </div> 
       </TableCell>
       <TableCell className="font-bold">$20,500  </TableCell>
@@ -111,12 +111,12 @@ export default function Tabledata() {
     </TableRow>
     <TableRow>
       <TableCell className="font-bold flex flex-row justify-start items-center gap-4">
-      <img src={"/Sales_Dashboard/assets/pricing.png"} alt="adob xd" loading="lazy" className="w-10 h-10"/>
+      <img src={"/assets/pricing.png"} alt="adob xd" loading="lazy" className="w-10 h-10"/>
       {t("dashboard.AddtheNewPricingPage")}
 </TableCell>
       <TableCell>
       <div className="flex">
-      <img src={"/Sales_Dashboard/assets/henyre.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
+      <img src={"/assets/henyre.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
       
       </div> 
       </TableCell>
@@ -130,13 +130,13 @@ export default function Tabledata() {
     </TableRow>
     <TableRow>
       <TableCell className="font-bold flex flex-row justify-start items-center gap-4">
-      <img src={"/Sales_Dashboard/assets/redesign.png"} alt="adob xd" loading="lazy" className="w-10 h-10"/>
+      <img src={"/assets/redesign.png"} alt="adob xd" loading="lazy" className="w-10 h-10"/>
       {t("dashboard.RedesignNewOnlineShop")}
       </TableCell>
       <TableCell>
       <div className="flex">
-      <img src={"/Sales_Dashboard/assets/dayana.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
-      <img src={"/Sales_Dashboard/assets/dayana1.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
+      <img src={"/assets/dayana.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
+      <img src={"/assets/dayana1.jpg"} alt="adob xd" loading="lazy" className="w-5 h-5 rounded-full"/>
       </div> 
       </TableCell>
       <TableCell className="font-bold">$2,000 </TableCell>

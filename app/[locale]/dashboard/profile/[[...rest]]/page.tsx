@@ -1,24 +1,15 @@
-'use client';
-import { useUser, UserProfile } from '@clerk/nextjs';
-import { useRouter } from 'next/navigation';
-import { useLocale } from 'next-intl';
-import { useEffect } from 'react';
 
+import { UserProfile } from '@clerk/nextjs';
+
+import {routing} from '@/i18n/routing';
+ 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({locale,
+    'rest': undefined, 
+  }));
+}
 export default function Profile() {
-  const { isSignedIn } = useUser();
-  const router = useRouter();
-  const locale = useLocale();
 
-  useEffect(() => {
-    if (!isSignedIn) {
-      router.push(`/${locale}/sign-in`);
-    }
-  }, [isSignedIn, router, locale]);
-
-  if (!isSignedIn) {
-    // اختياري: render فارغ أو loading
-    return <p>Redirecting...</p>;
-  }
 
   return (
     <div className='flex justify-center items-center my-10'>

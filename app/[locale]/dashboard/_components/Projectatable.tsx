@@ -29,7 +29,7 @@ export default function Projectatable() {
   <TableBody>
     <TableRow>
       <TableCell className="font-bold flex flex-row justify-start items-center gap-1.5">
-        <img src={"/Sales_Dashboard/assets/Spotify.svg"} alt="Spotify" loading="lazy" className="w-12 h-12"/>
+        <img src={"/assets/Spotify.svg"} alt="Spotify" loading="lazy" className="w-12 h-12"/>
         {t("tables.Spotify")}
       </TableCell>
       
@@ -47,7 +47,7 @@ export default function Projectatable() {
     </TableRow>
     <TableRow>
       <TableCell className="font-bold flex flex-row justify-start items-center gap-4">
-      <img src={"/Sales_Dashboard/assets/invisionl.png"} alt="Invision" loading="lazy" className="w-8 h-8"/>
+      <img src={"/assets/invisionl.png"} alt="Invision" loading="lazy" className="w-8 h-8"/>
       {t("tables.Invision")}
 </TableCell>
       <TableCell className="font-bold">
@@ -63,7 +63,7 @@ export default function Projectatable() {
     </TableRow>
     <TableRow>
       <TableCell className="font-bold flex flex-row justify-start items-center gap-4">
-      <img src={"/Sales_Dashboard/assets/Jira.png"} alt="Jira" loading="lazy" className="w-12 h-12"/>
+      <img src={"/assets/Jira.png"} alt="Jira" loading="lazy" className="w-12 h-12"/>
 
       {t("tables.Jira")}
 </TableCell>
@@ -80,7 +80,7 @@ export default function Projectatable() {
     </TableRow>
     <TableRow>
       <TableCell className="font-bold flex flex-row justify-start items-center gap-4">
-      <img src={"/Sales_Dashboard/assets/slack.png"} alt="Slack" loading="lazy" className="w-10 h-10"/>
+      <img src={"/assets/slack.png"} alt="Slack" loading="lazy" className="w-10 h-10"/>
       {t("tables.Slack")}
 </TableCell>
       <TableCell className="font-bold">
@@ -96,7 +96,7 @@ export default function Projectatable() {
     </TableRow>
     <TableRow>
       <TableCell className="font-bold flex flex-row justify-start items-center gap-4">
-      <img src={"/Sales_Dashboard/assets/Webdev.png"} alt="Webdev" loading="lazy" className="w-10 h-10"/>
+      <img src={"/assets/Webdev.png"} alt="Webdev" loading="lazy" className="w-10 h-10"/>
       {t("tables.Webdev")}
 </TableCell>
       <TableCell className="font-bold">
@@ -112,7 +112,7 @@ export default function Projectatable() {
     </TableRow>
     <TableRow>
       <TableCell className="font-bold flex flex-row justify-start items-center gap-4">
-      <img src={"/Sales_Dashboard/assets/adobe.png"} alt="adob xd" loading="lazy" className="w-10 h-10"/>
+      <img src={"/assets/adobe.png"} alt="adob xd" loading="lazy" className="w-10 h-10"/>
       {t("tables.Adobe")}
       </TableCell>
       <TableCell  className="font-bold">

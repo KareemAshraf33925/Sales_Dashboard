@@ -16,6 +16,11 @@ type InfocardProps={
   iconColor:string
   bgColor:string
 }
+import { routing } from '@/i18n/routing'
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
+}
 export default function Dashboard() {
   const t = useTranslations();
   const Infocard:InfocardProps[]=[{

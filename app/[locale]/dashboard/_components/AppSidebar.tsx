@@ -54,7 +54,7 @@ const items:menueProps = [
   return (
     <Sidebar className="py-5 px-3" >
       <SidebarHeader  className="flex justify-center items-center">
-      <Image src={"/Sales_Dashboard/assets/dashboard-icon.png"} width={100} height={200} alt="chat"/>
+      <Image src={"/assets/dashboard-icon.png"} width={100} height={200} alt="chat"/>
       </SidebarHeader>
       <SidebarContent >
       <SidebarGroup className="text-center">
