@@ -1,3 +1,4 @@
+import {setRequestLocale} from 'next-intl/server';
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -30,46 +31,32 @@ export const metadata: Metadata = {
     icon: "/Sales_Dashboard/assets/dashboard-icon.png",
   },
 };
-
-export default function RootLayout({
-  children,
-  params,
-}: {
+type Props = {
   children: React.ReactNode;
-  params: { locale: string };
-}) {
+  params: Promise<{locale: string}>;
+};
+export default async function LocaleLayout({children, params}: Props) {
+  const {locale} = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+  setRequestLocale(locale);
+  
+
   return (
     <ClerkProvider>
       <html
-        lang={params.locale}
-        dir={params.locale === "ar" ? "rtl" : "ltr"}
+        lang={locale}
+        dir={locale === "ar" ? "rtl" : "ltr"}
         style={{ colorScheme: "light" }}
         className="light"
       >
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-          <AsyncIntlProvider locale={params.locale}>{children}</AsyncIntlProvider>
+         
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+         
         </body>
       </html>
     </ClerkProvider>
-  );
-}
-
-// مكون فرعي async للفصل بين logic وال layout
-async function AsyncIntlProvider({
-  children,
-  locale,
-}: {
-  children: React.ReactNode;
-  locale: string;
-}) {
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
-
-  const messages = await getMessages({ locale });
-  return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
-      {children}
-    </NextIntlClientProvider>
   );
 }
